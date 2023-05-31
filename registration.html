@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#button-registration").one("click", function () { alert("Вы успешно зарегистрировались") });
+
+        });                                           
+    </script>
+    </script>
+    <script src="z.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? family=Kadwa&display=swap" rel="stylesheet">
+    <title>Городской портал</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-fotos">
+                <img src="img/image 1.png" alt="logo" class="logo-foto">
+                <h2 class="logo-text">Сделаем мир лучше!</h2>
+            </div>
+            <ul class="hd">
+                <a href="index.html">
+                    <li class="head-text2">Главная</li>
+                </a>
+                <a href="login.html">
+                    <li class="head-text3">Регистрация/Вход</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+    <section class="input">
+        <div class="pole-2">
+            <h2 class="text-section-2">Регистрация</h2>
+            <div id="registration">
+                <p><input name="name" type="name" class="text-2" placeholder="Введите ФИО" id="name" required></p>
+                <input type="login" class="text-2" placeholder="Логин" id="login" required pattern="#[0-9A-Fa-f]{6}">
+                <input type="email" class="text-2" placeholder="E-mail" id="mail" required>
+                <input type="text" class="text-2" placeholder="Пароль" id="password" required>
+                <input type="text" class="text" placeholder="Повторите пароль" id="password-2" required>
+                <button class="button" id="button-registration" type="submit"><a href="user.html">Регистрация</a></button>
+
+            </div>
+            <label class="label-checkbox">
+                <input type="checkbox" class="checkbox">
+                <span class="fake"></span>
+                <div class="text-checkbox"><span class="text-check">Согласие на обработку данных</span></div>
+            </label>
+        </div>
+
+    </section>
+    <script src="z.js" type="modyle"></script>
+</body>

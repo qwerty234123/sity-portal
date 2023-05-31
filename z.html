@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="z.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? family=Kadwa&display=swap" rel="stylesheet">
+    <title>Городской портал</title>
+    <script type="text/javascript" src="z.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-fotos">
+                <img src="img/image 1.png" alt="logo" class="logo-foto">
+                <h2 class="logo-text">Сделаем мир лучше!</h2>
+            </div>
+            <ul class="hd">
+                <li class="head-text"><a href="index.html" class="a">Главная</a></li>
+                <li class="head-text1"><a href="#" class="a">Выход</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="input" style="height: 800px;">
+        <p class="application-text">Опишите свою проблему</p>
+        <div class="problems">
+            <div class="problem">
+                <p class="text-problem-1">Название</p>
+                <input type="text" class="input-problem">
+            </div>
+            <div class="problem">
+                <p class="text-problem-2">Описание</p>
+                <input type="text" class="input-problem">
+            </div>
+            <div class="problem">
+                <p class="text-problem-3">Категория</p>
+                <form action="formdata" method="post" name="form1">
+                    <p><select name="list1" class="input-problem-cat">
+                            <option class="text-problem-cat">Выберите из списка</option>
+                            <option class="pc">Дороги</option>
+                            <option class="pc">Снег</option>
+                            <option class="pc">Мусор</option>
+                            <option class="pc">Бытовые проблемы</option>
+                        </select></p>
+
+            </div>
+            <div class="problem">
+                <p class="text-problem-4">Фото</p>
+                <form method="post" enctype="multipart/form-data">
+                    <label class="input-file">
+                        <input type="file" name="file[]" multiple accept="image/*">
+                        <span>Выберите файл</span>
+                    </label>
+                </form>
+            </div>
+            <div class="grade">
+                <div class="container">
+                    <div class="counters">
+
+                        <p class="text-problem-5">Насколько важна проблема</p>
+                        <div class="counter"><button id="increment-btn">+</button>
+                            <div id="counter-value">0</div>
+                            <button id="decrement-btn">-</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <script>
+                    let counter = 0;
+
+                    const counterValue = document.getElementById('counter-value');
+                    const incrementBtn = document.getElementById('increment-btn');
+                    const decrementBtn = document.getElementById('decrement-btn');
+                    const resetBtn = document.querySelector('#reset');
+                    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+                    const buttons = document.querySelectorAll("button");
+
+                    buttons.forEach(button => {
+                        button.addEventListener("click", () => {
+                            audio.play();
+                        });
+                    });
+
+
+                    // To increment the value of counter
+                    incrementBtn.addEventListener('click', () => {
+                        counter++;
+                        counterValue.innerHTML = counter;
+
+                    });
+
+                    // To decrement the value of counter
+                    decrementBtn.addEventListener('click', () => {
+                        counter--;
+                        counterValue.innerHTML = counter;
+                    });
+
+                    // To reset the counter to zero
+                    resetBtn.addEventListener('click', reset);
+
+                    function reset() {
+                        counter = 0;
+                        counterValue.innerHTML = counter;
+                    }
+
+
+                    buttons.forEach(button => {
+                        button.addEventListener("click", () => {
+                            audio.play();
+                        });
+                    });
+                </script>
+            </div>
+            <button class="button-application" type="button">Отправить</button>
+        </div>
+    </section>
+
+
+</body>
